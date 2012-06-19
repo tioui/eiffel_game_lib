@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Eiffel game lib : A Game library for EiffelStudio" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Eiffel game lib</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tioui/eiffel_game_lib">View on GitHub</a>
+
+          <h1 id="project_title">Eiffel game lib</h1>
+          <h2 id="project_tagline">A Game library for EiffelStudio</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/tioui/eiffel_game_lib/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/tioui/eiffel_game_lib/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>eiffel_game_lib</h1>
+
+<p>A Game library for ISE Eiffel.
+This is a library for game developping with the Eiffel Language. The library is made for the IDE EiffelStudio.</p>
+
+<p>The library is compatible with Linux, MAC OS X, Windows, GP2X Wiz and Caanoo.</p>
+
+<p>The library is under Eiffel Forum License v2.</p>
+
+<p>The project use those libraries: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL and Libsndfile.</p>
+
+<h2>Installation on Linux (Ubuntu)</h2>
+
+<ul>
+<li>I assume that you already have a fonctionnal EiffelStudio on your system. If not, install it.</li>
+<li>You need to set the environment variable EIF_GAME_LIB to the root directory of the Eiffel Game Lib repository directory. You can do it with the /etc/environment file:<br>
+</li>
+</ul><hr><pre><code>sudo -s  
+echo "EIF_GAME_LIB='/home/user/projects/eiffel_game_dir'" &gt;&gt; /etc/environment  
+exit  
+</code></pre>
+
+<hr><ul>
+<li>You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile and all their development tools kit and dependancies:<br>
+</li>
+</ul><hr><pre><code>sudo apt-get install libsdl-dev libsdl-image1.2-dev libsdl-gfx1.2-dev libsdl-ttf2.0-dev libopenal-dev libsndfile1-dev  
+</code></pre>
+
+<hr><ul>
+<li>Create a project and add the Eiffel_game_lib library (".ecf") file in the project (You can use the EIF_GAME_LIB environment variable).</li>
+</ul><h2>Installation on Windows</h2>
+
+<ul>
+<li>You must use an EiffelStudio that use the MinGW compiler to work. If you don't have it already, install it.</li>
+<li>You need to set the environment variable EIF_GAME_LIB to the root directory of the Eiffel Game Lib repository directory.</li>
+<li>You need to add the Msys and MinGW bin directory in the system PATH variable (Both are in the EiffelStudio program sub directory)</li>
+<li>You need to install the C libraries dependancies. To get them, download the file <a href="https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip">https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip</a> . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.</li>
+<li>Create a project and add the Eiffel_game_lib library (".ecf") file in the project (You can use the EIF_GAME_LIB environment variable).</li>
+<li>Put all ".dll" files of the %EIF_GAME_LIB%\C_lib_win\DLL directory in the new project directory.</li>
+<li>Please note that the library does not work with the Microsoft C compiler for now.</li>
+<li>Please note that the library does not work on an 64 bits Windows compiler. It should not be too dificult to make it work on such compiler, but I don't have a 64 bits Windows to do it.</li>
+</ul><h2>Installation on GP2X Wiz</h2>
+
+<ul>
+<li>Do the "Installation on Linux" first and test a project to valid it work correctly before trying to comile it on Wiz.</li>
+<li>Install the linux-wiz spec as specified in this project: <a href="https://github.com/tioui/Eiffel_Spec">https://github.com/tioui/Eiffel_Spec</a> .</li>
+<li>You need to install the C libraries dependancies. To get them, download the file <a href="https://github.com/downloads/tioui/eiffel_game_lib/C_lib_wiz.tar.bz2">https://github.com/downloads/tioui/eiffel_game_lib/C_lib_wiz.tar.bz2</a> . When you extract the file, you should have a C_lib_wiz directory. Put the C_lib_wiz directory in the root directory of the Eiffel Game Lib repository directory.</li>
+<li>In the project that use the Eiffel Game Lib, create another target that extend the first one and add a variable "toolchain" in the target (in EiffelStudio or directly in the ".ecf" file). This variable "toolchain" must be set to "wiz".</li>
+<li>You must finalize you project to use in on the wiz.</li>
+<li>Note that you cannot debug on the Wiz.</li>
+</ul><h2>Installation on GPH Caanoo</h2>
+
+<ul>
+<li>Do the "Installation on Linux" first and test a project to valid it work correctly before trying to comile it on Caanoo.</li>
+<li>Install the linux-caanoo spec as specified in this project: <a href="https://github.com/tioui/Eiffel_Spec">https://github.com/tioui/Eiffel_Spec</a> .</li>
+<li>You need to install the C libraries dependancies. To get them, download the file <a href="https://github.com/downloads/tioui/eiffel_game_lib/C_lib_caanoo.tar.bz2">https://github.com/downloads/tioui/eiffel_game_lib/C_lib_caanoo.tar.bz2</a> . When you extract the file, you should have a C_lib_caanoo directory. Put the C_lib_caanoo directory in the root directory of the Eiffel Game Lib repository directory.</li>
+<li>In the project that use the Eiffel Game Lib, create another target that extend the first one and add a variable "toolchain" in the target (in EiffelStudio or directly in the ".ecf" file). This variable "toolchain" must be set to "caanoo".</li>
+<li>You must finalize you project to use in on the caanoo.</li>
+<li>Note that you cannot debug on the caanoo.</li>
+</ul><h2>Installation on Mac OS X</h2>
+
+<ul>
+<li>Install EiffelStudio (I did this via MacPort).</li>
+<li>You need to get some files to adjust SDL on Mac OS X. To get them, download the file <a href="https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz">https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz</a> . When you extract the file, you should have a C_lib_mac directory. Put the C_lib_mac directory in the root directory of the Eiffel Game Lib repository directory.</li>
+<li>You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile and all their development tools kit and dependancies. You can install them with MapPort by installing the port libsdl-framework, libsdl_gfx-framework, libsdl_image-framework, libsdl_ttf-framework and libsndfile.</li>
+<li>OpenAL must be install another way. For that, install cmake using MacPort. Extract the file "openal-soft-1.14.tar.bz2" found in the C_lib_mac.tar.gz archive downloaded in before. Once extract, open a terminal a go into the directory build of the created directory of the archive extraction. Compile the library and install it</li>
+</ul><hr><pre><code>cd /path/to/openal-soft-1.14/build
+cmake ..
+make
+sudo make install
+</code></pre>
+
+<hr><ul>
+<li>Now copy all SDL installed library from the /opt/local/Library/ to the /Library directory.</li>
+</ul><hr><pre><code>sudo cp -rp /opt/local/Library/Frameworks/SDL*.framework /Library/Frameworks/
+</code></pre>
+
+<hr><ul>
+<li>Now, ready for the hard part? The SDL library need a specific Main in the C program and also need to have an "#include " in the same C file that the on that contain the main. It is evident that EiffelStudio don't respect these necessities from SDL. We will have to do a little hack to allow EiffelStudio to use SDL. We will make the hack in a new EiffelStudio application (a copy), so don't worry, your EiffelStudio should not be harm by this hack.</li>
+<li>Open a terminal a go to the directory Eiffel?? (most likely Eiffel70) in the Application directory tree.</li>
+</ul><hr><pre><code>cd /Applications/MacPorts/Eiffel??
+</code></pre>
+
+<hr><ul>
+<li>Copy the EiffelStudio.app file to EiffelStudio-SDL.app</li>
+</ul><hr><pre><code>sudo cp -rp EiffelStudio.app EiffelStudio-SDL.app
+</code></pre>
+
+<hr><ul>
+<li>Modify the launcher to add a new spec for SDL (we will also set the EIF_GAME_LIB environment variable there). Use your favorite text editor (I use vim):</li>
+</ul><hr><pre><code>sudo vim EiffelStudio-SDL.app/Contents/Resources/EiffelLauncher
+</code></pre>
+
+<hr><ul>
+<li>Change the line 38:</li>
+</ul><hr><pre><code>Before: export ISE_PLATFORM=macosx-x86-64
+</code></pre>
+
+<hr><hr><pre><code>After: export ISE_PLATFORM=macosx-x86-64-SDL
+</code></pre>
+
+<hr><ul>
+<li>Change the line 40:</li>
+</ul><hr><pre><code>Before: export ISE_PLATFORM=macosx-x86
+</code></pre>
+
+<hr><hr><pre><code>After: export ISE_PLATFORM=macosx-x86-SDL
+</code></pre>
+
+<hr><ul>
+<li>Change the line 45 (of course, change the path to your Eiffel Game Lib path):</li>
+</ul><hr><pre><code>Before: (EMPTY)
+</code></pre>
+
+<hr><hr><pre><code>After: export EIF_GAME_LIB=/path/to/root/of/Eiffel_Game_Lib_Dir
+</code></pre>
+
+<hr><ul>
+<li>Save and quit the text editor.</li>
+<li>Copy the macosx-x86 and the macosx-x86-64 specs to macosx-x86-SDL and the macosx-x86-64-SDL:</li>
+</ul><hr><pre><code>sudo cp -rp studio/spec/macosx-x86-64 studio/spec/macosx-x86-64-SDL
+sudo cp -rp studio/config/macosx-x86-64 studio/config/macosx-x86-64-SDL
+</code></pre>
+
+<hr><ul>
+<li>Modify the C file template to fit the SDL necessities. Use your favorite text editor (I use vim):</li>
+</ul><hr><pre><code>sudo vim studio/config/macosx-x86-64-SDL/templates/emain.template
+</code></pre>
+
+<hr><ul>
+<li>Change the line 11:</li>
+</ul><hr><pre><code>Before: (EMPTY)
+</code></pre>
+
+<hr><hr><pre><code>After: #include "SDL.h"
+</code></pre>
+
+<hr><ul>
+<li>Change the line 13:</li>
+</ul><hr><pre><code>Before: extern int main(int, char **, char **);
+</code></pre>
+
+<hr><hr><pre><code>After: extern int main(int, char **);
+</code></pre>
+
+<hr><ul>
+<li>Change the line 18:</li>
+</ul><hr><pre><code>Before: (EMPTY)
+</code></pre>
+
+<hr><hr><pre><code>After: extern char **environ;
+</code></pre>
+
+<hr><ul>
+<li>Change the line 19:</li>
+</ul><hr><pre><code>Before: int main (int argc, char ** argv, char ** envp)
+</code></pre>
+
+<hr><hr><pre><code>After: int main (int argc, char ** argv)
+</code></pre>
+
+<hr><ul>
+<li>Change the line 21:</li>
+</ul><hr><pre><code>Before: (EMPTY)
+</code></pre>
+
+<hr><hr><pre><code>After: char **envp = environ;
+</code></pre>
+
+<hr><ul>
+<li>Save and quit the text editor.</li>
+<li>Use the EiffelStudio-SDL application to use the library.</li>
+<li>Create a project and add the Eiffel_game_lib library (".ecf") file in the project (You can use the EIF_GAME_LIB environment variable).</li>
+<li>Note that the spec that we create has no precompile library. It will be necessary to remove the default Precompile library in the project.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Eiffel game lib maintained by <a href="https://github.com/tioui">tioui</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
