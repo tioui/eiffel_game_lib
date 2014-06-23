@@ -106,49 +106,49 @@ feature -- CustomPackageFileInfos struct
 
 	frozen c_sizeof_custom_package_file_infos:INTEGER
 		external
-			"C inline use <cpf_more.h>"
+			"C inline use <cpf_additions.h>"
 		alias
 			"sizeof(CustomPackageFileInfos)"
 		end
 
 	frozen set_custom_package_infos_struct_file_ptr (cpf_infos,file_ptr: POINTER)
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos, FILE *)"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos, FILE *)"
 		alias
 			"filePtr"
 		end
 
 	frozen get_custom_package_infos_struct_file_ptr (cpf_infos:POINTER):POINTER
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos):FILE *"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos):FILE *"
 		alias
 			"filePtr"
 		end
 
 	frozen set_custom_package_infos_struct_start_offset (cpf_infos: POINTER;value:INTEGER_64)
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos, int64_t)"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos, int64_t)"
 		alias
 			"StartOffset"
 		end
 
 	frozen get_custom_package_infos_struct_start_offset (cpf_infos:POINTER):INTEGER_64
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos):int64_t"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos):int64_t"
 		alias
 			"StartOffset"
 		end
 
 	frozen set_custom_package_infos_struct_total_size (cpf_infos: POINTER;value:INTEGER_64)
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos, int64_t)"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos, int64_t)"
 		alias
 			"TotalSize"
 		end
 
 	frozen get_custom_package_infos_struct_total_size (cpf_infos:POINTER):INTEGER_64
 		external
-			"C [struct <cpf_more.h>] (CustomPackageFileInfos):int64_t"
+			"C [struct <cpf_additions.h>] (CustomPackageFileInfos):int64_t"
 		alias
 			"TotalSize"
 		end

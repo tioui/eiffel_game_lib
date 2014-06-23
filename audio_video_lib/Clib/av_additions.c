@@ -3,7 +3,7 @@
  * Date: June 10, 2012			*
  * Version: 0.3				*/
 
-#include "av_more.h"
+#include "av_additions.h"
 
 /* Functions to add the "Custom Package File" functionality	*/
 

@@ -1,3 +1,8 @@
 .DS_Store
 EIFGENs
 objet-*
+C_lib_win
+*.dll
+msc
+mingw
+*.rc

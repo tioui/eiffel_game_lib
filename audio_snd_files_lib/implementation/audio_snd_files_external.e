@@ -74,11 +74,11 @@ feature -- libsndfile fonctions
 			"sizeof(SF_VIRTUAL_IO)"
 		end
 
-feature -- sndfile_more functions
+feature -- sndfile_additions functions
 
 	frozen set_snd_file_virtual_io(virtual_io:POINTER)
 		external
-			"C (SF_VIRTUAL_IO *) | <sndfile_more.h>"
+			"C (SF_VIRTUAL_IO *) | <sndfile_additions.h>"
 		alias
 			"setSndFileVirtualIo"
 		end

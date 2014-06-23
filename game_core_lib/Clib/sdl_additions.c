@@ -3,7 +3,7 @@
  * Date: June 10, 2012			*
  * Version: 0.3				*/
 
-#include "core_more.h" 
+#include "sdl_additions.h" 
 
 /* Functions to add functionnalities to the SDL C library 	*
  * Strongly inspire by the code of the library SDL_gfx.		*/

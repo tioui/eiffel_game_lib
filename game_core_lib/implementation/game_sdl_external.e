@@ -501,35 +501,35 @@ feature -- Manual C function (implemented in SDLmore.c)
 
 	frozen rotateSurface90Degrees(surface:POINTER;nb_clockwise:INTEGER):POINTER
 		external
-			"C (SDL_Surface *,int) : SDL_Surface * | %"core_more.h%""
+			"C (SDL_Surface *,int) : SDL_Surface * | %"sdl_additions.h%""
 		alias
 			"rotateSurface90Degrees_all"
 		end
 
 	frozen getPixel(surface:POINTER;x,y:INTEGER):NATURAL_32
 		external
-			"C (SDL_Surface *,int,int) : Uint32 | %"core_more.h%""
+			"C (SDL_Surface *,int,int) : Uint32 | %"sdl_additions.h%""
 		alias
 			"getpixel"
 		end
 
 	frozen putPixel(surface:POINTER;x,y:INTEGER;pixel:NATURAL_32)
 		external
-			"C (SDL_Surface *,int,int,Uint32) | %"core_more.h%""
+			"C (SDL_Surface *,int,int,Uint32) | %"sdl_additions.h%""
 		alias
 			"putpixel"
 		end
 
 	frozen copyPalette(surface_src,surface_dst:POINTER)
 		external
-			"C (SDL_Surface *,SDL_Surface *)  | %"core_more.h%""
+			"C (SDL_Surface *,SDL_Surface *)  | %"sdl_additions.h%""
 		alias
 			"CopyPalette_8"
 		end
 
 	frozen MirrorSurfaceX(surface:POINTER):POINTER
 		external
-			"C (SDL_Surface *) : SDL_Surface * | %"core_more.h%""
+			"C (SDL_Surface *) : SDL_Surface * | %"sdl_additions.h%""
 		alias
 			"MirrorSurfaceX"
 		end
@@ -537,7 +537,7 @@ feature -- Manual C function (implemented in SDLmore.c)
 
 	frozen MirrorSurfaceY(surface:POINTER):POINTER
 		external
-			"C (SDL_Surface *) : SDL_Surface * | %"core_more.h%""
+			"C (SDL_Surface *) : SDL_Surface * | %"sdl_additions.h%""
 		alias
 			"MirrorSurfaceY"
 		end
@@ -545,7 +545,7 @@ feature -- Manual C function (implemented in SDLmore.c)
 
 	frozen setSDLRWops(rwop,cpf_infos:POINTER)
 		external
-			"C (SDL_RWops *,CustomPackageFileInfos*) | %"core_more.h%""
+			"C (SDL_RWops *,CustomPackageFileInfos*) | %"sdl_additions.h%""
 		alias
 			"setSDLRWops"
 		end
@@ -4508,28 +4508,28 @@ feature -- Macro SDL.h
 			"SDL_ALPHA_TRANSPARENT"
 		end
 
-feature -- Macro SDL_endian.h
+--feature -- Macro SDL_endian.h
 
-	frozen SDL_BYTEORDER:NATURAL_32
-		external
-			"C inline use <SDL_endian.h>"
-		alias
-			"SDL_BYTEORDER"
-		end
+--	frozen SDL_BYTEORDER:NATURAL_32
+--		external
+--			"C inline use <SDL_endian.h>"
+--		alias
+--			"SDL_BYTEORDER"
+--		end
 
-	frozen SDL_LIL_ENDIAN:NATURAL_32
-		external
-			"C inline use <SDL_endian.h>"
-		alias
-			"SDL_LIL_ENDIAN"
-		end
+--	frozen SDL_LIL_ENDIAN:NATURAL_32
+--		external
+--			"C inline use <SDL_endian.h>"
+--		alias
+--			"SDL_LIL_ENDIAN"
+--		end
 
-	frozen SDL_BIG_ENDIAN:NATURAL_32
-		external
-			"C inline use <SDL_endian.h>"
-		alias
-			"SDL_BIG_ENDIAN"
-		end
+--	frozen SDL_BIG_ENDIAN:NATURAL_32
+--		external
+--			"C inline use <SDL_endian.h>"
+--		alias
+--			"SDL_BIG_ENDIAN"
+--		end
 
 
 end

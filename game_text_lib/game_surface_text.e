@@ -33,7 +33,7 @@ feature {NONE} -- Initialization
 			l_utf_converter:UTF_CONVERTER
 		do
 			init_var(a_text,a_font,a_color)
-			if l_text_c.string.is_empty then
+			if a_text.is_empty then
 				make (100, 100)
 				create l_color.make (0, 0, 0, 255)
 				put_pixel_color (0, 0, l_color)
@@ -71,7 +71,7 @@ feature {NONE} -- Initialization
 		do
 			init_var(a_text,a_font,a_color)
 			color_bg:=a_color_bg
-			if l_text_c.string.is_empty then
+			if a_text.is_empty then
 				make (100, 100)
 				put_pixel_color (0, 0, color_bg)
 			else

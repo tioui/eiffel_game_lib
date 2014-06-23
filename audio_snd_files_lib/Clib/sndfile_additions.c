@@ -3,7 +3,7 @@
  * Date: June 10, 2012			*
  * Version: 0.3				*/
 
-#include "sndfile_more.h"
+#include "sndfile_additions.h"
 
 /* Functions to add the "Custom Package File" functionality	*/
 

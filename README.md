@@ -2,7 +2,7 @@ eiffel_game_lib
 ===============
 
 A Game library for ISE Eiffel.
-This is a library for game developping with the Eiffel Language. The library is compatible with the IDE EiffelStudio 7.3 from ISE.
+This is a library for game developing with the Eiffel Language. The library is compatible with the IDE EiffelStudio 7.3 from ISE.
 
 The library is compatible with Linux, MAC OS X, Windows, GP2X Wiz and Caanoo.
 
@@ -15,11 +15,11 @@ The project use those libraries: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, Libsn
 Installation on Linux (Ubuntu)
 ------------------------------
 
-* I assume that you already have a fonctionnal EiffelStudio on your system. If not, install it.
+* I assume that you already have a functional EiffelStudio on your system. If not, install it.
 * Rename the "eiffel_game_lib" folder to "game".
-* You need to add the game library in the "contrib/library" folder of EiffelStudio. Normaly, this folder is in "/usr/lib/EiffelStudio73" or in "/usr/local/Eiffel73".
+* You need to add the game library in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/usr/lib/EiffelStudio73" or in "/usr/local/Eiffel73".
 
-* You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile and all their development tools kit and dependancies:  
+* You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile and all their development tools kit and dependencies:  
 
 ***
 
@@ -35,21 +35,21 @@ Installation on Windows
 
 * You must use an EiffelStudio 32 bits that use the MinGW compiler to work. If you don't have it already, install it.
 * Rename the "eiffel_game_lib" folder to "game".
-* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normaly, this folder is in "c:\Program Files\Eiffel Software\".
+* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "c:\Program Files\Eiffel Software\".
 * You need to add the Msys and MinGW bin directory in the system PATH variable (Both are in the EiffelStudio program sub directory)
-* You need to install the C libraries dependancies. To get them, download the file [https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip](https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip) . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.
+* You need to install the C libraries dependencies. To get them, download the file [https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip](https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip) . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.
 * Create a project and add the libraries you need (".ecf" file) in the project.(You can use the EIFFEL_LIBRARY environment variable to add those libraries. For example: $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/game_core_lib.ecf .
 * Put all ".dll" files of the C_lib_win\DLL directory in the new project directory or in the C:\Windows\System32\ (or in SysWOW64 if you use a 64bits Windows).
-* Please note that the library does not work with the Microsoft C compiler for now.
+* Please note that since the libav C library does not support the Visual C compiler, the audio video library (to play movie) will not compile with Visual C compiler.
 * Please note that the library does not work on an 64 bits compiler.
 
 Installation on Mac OS X
 ------------------------
 
 * Install EiffelStudio 7.3.
-* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normaly, this folder is in "/Applications/MacPorts/Eiffel73/".
+* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/Applications/MacPorts/Eiffel73/".
 * You need to get some files to adjust SDL on Mac OS X. To get them, download the file [https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz](https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz) . When you extract the file, you should have a C_lib_mac directory. Put the C_lib_mac directory in the root directory of the Eiffel Game Lib repository directory.
-* You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile, ffmpeg library and all their development tools kit and dependancies. You can install them with MacPort by installing the port libsdl-framework, libsdl_gfx-framework, libsdl_image-framework, libsdl_ttf-framework, libsndfile and ffmpeg-devel.
+* You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile, ffmpeg library and all their development tools kit and dependencies. You can install them with MacPort by installing the port libsdl-framework, libsdl_gfx-framework, libsdl_image-framework, libsdl_ttf-framework, libsndfile and ffmpeg-devel.
 * OpenAL must be install another way. For that, install cmake using MacPort. Extract the file "openal-soft-1.14.tar.bz2" found in the C_lib_mac.tar.gz archive downloaded in before. Once extract, open a terminal a go into the directory build of the created directory of the archive extraction. Compile the library and install it
 
 
@@ -81,7 +81,7 @@ Installation on Mac OS X
 
 ***
 
-* Modify the C file template to fit the SDL necessities. Use your favorite text editor (I use vim):
+* Modify the C file template to fit the SDL necessities. Use your favourite text editor (I use vim):
 
 ***
 
