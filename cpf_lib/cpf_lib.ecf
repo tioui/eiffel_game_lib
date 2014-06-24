@@ -71,12 +71,6 @@
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_library>
-		<pre_compile_action working_directory="$EIFFEL_LIBRARY\contrib\library\game\cpf_lib\implementation\Clib\" command="make $ISE_PLATFORM">
-			<description>Compile the modified CPF method.</description>
-			<condition>
-				<platform excluded_value="windows"/>
-			</condition>
-		</pre_compile_action>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
 		<library name="thread" location="$ISE_LIBRARY\library\thread\thread.ecf"/>
 		<cluster name="cpf_lib" location=".\" recursive="true">

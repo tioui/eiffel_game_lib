@@ -161,18 +161,11 @@
 				<platform value="unix"/>
 			</condition>
 		</external_linker_flag>
-		<pre_compile_action working_directory="$EIFFEL_LIBRARY\contrib\library\game\audio_video_lib\implementation\Clib\" command="make $ISE_PLATFORM">
-			<description>Compile the modified Audio Video libav methods.</description>
+		<external_linker_flag value="-lavutil">
 			<condition>
-				<platform excluded_value="windows"/>
+				<platform value="unix"/>
 			</condition>
-		</pre_compile_action>
-		<pre_compile_action working_directory="$EIFFEL_LIBRARY\contrib\library\game\audio_video_lib\implementation\Clib\" command="gmake windows">
-			<description>Compile the modified Audio Video LibAV methods.</description>
-			<condition>
-				<platform value="windows"/>
-			</condition>
-		</pre_compile_action>
+		</external_linker_flag>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
 		<library name="cpf_lib" location="$EIFFEL_LIBRARY\contrib\library\game\cpf_lib\cpf_lib.ecf"/>
 		<library name="game_core_lib" location="$EIFFEL_LIBRARY\contrib\library\game\game_core_lib\game_core_lib.ecf"/>

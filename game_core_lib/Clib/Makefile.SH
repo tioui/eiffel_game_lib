@@ -19,8 +19,8 @@ AR = ar rc
 CC = $cc
 CTAGS = ctags
 INCLUDE = -I../spec/include -I../../cpf_lib/spec/include
-CFLAGS = $optimize $ccflags $large -g \$(INCLUDE)
-MTCFLAGS = $optimize $mtccflags $large -g \$(INCLUDE)
+CFLAGS = $optimize $ccflags `sdl-config --cflags` $large -g \$(INCLUDE)
+MTCFLAGS = $optimize $mtccflags `sdl-config --cflags` $large -g \$(INCLUDE)
 SHAREDLINK = $sharedlink
 LDSHAREDFLAGS = $ldsharedflags
 LN = $ln
@@ -39,8 +39,8 @@ PLATFORM = $ISE_PLATFORM
 !GROK!THIS!
 $spitshell >>Makefile <<'!NO!SUBS!'
 
-MT_OBJECTS = MTsndfile_additions.o
-OBJECTS = sndfile_additions.o 
+MT_OBJECTS = MTsdl_additions.o
+OBJECTS = sdl_additions.o 
 
 ALL_OBJECTS = $(OBJECTS) $(MT_OBJECTS)
 
@@ -49,10 +49,10 @@ all: $(ALL_OBJECTS)
 	$(MV) $? ../spec/$(PLATFORM)/lib
 	$(MAKE) clobber
 
-MTsndfile_additions.o: sndfile_additions.c
+MTsdl_additions.o: sdl_additions.c
 	$(CC) -c $(MTCFLAGS) $? -o $@
 
-sndfile_additions.o: sndfile_additions.c
+sdl_additions.o: sdl_additions.c
 	$(CC) -c $(CFLAGS) $? -o $@
 
 ########################################################################
@@ -92,3 +92,4 @@ local_clobber::
 !NO!SUBS!
 chmod 644 Makefile
 $eunicefix Makefile
+

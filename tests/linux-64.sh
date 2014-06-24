@@ -1,21 +1,17 @@
 #!/bin/bash
 
-export ISE_EIFFEL=/usr/local/Eiffel73
-export ISE_PLATFORM=linux-x86-64
-export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
-export LANG=C
+if [ -z "$EIFFEL_LIBRARY" ]; then
+	echo "Variable EIFFEL_LIBRARY not set"
+	exit
+fi
 
-PARAM="$1"
+
 
 function clibClear () {
-	cd $EIFFEL_LIBRARY/contrib/library/game/audio_snd_files_lib/implementation/Clib
-	make clean
-	cd $EIFFEL_LIBRARY/contrib/library/game/audio_video_lib/implementation/Clib
-	make clean
-	cd $EIFFEL_LIBRARY/contrib/library/game/cpf_lib/implementation/Clib
-	make clean
-	cd $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/implementation/Clib
-	make clean
+	rm -rf $EIFFEL_LIBRARY/contrib/library/game/audio_snd_files_lib/spec/linux-x86-64
+	rm -rf $EIFFEL_LIBRARY/contrib/library/game/audio_video_lib/spec/linux-x86-64
+	rm -rf $EIFFEL_LIBRARY/contrib/library/game/cpf_lib/spec/linux-x86-64
+	rm -rf $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/spec/linux-x86-64
 }
 
 function eifgensLibClear () {
@@ -51,10 +47,22 @@ function eifgensExClear () {
 	rm -rf $EIFFEL_LIBRARY/contrib/library/game/exemples/audio_video_cpf/project/EIFGENs
 }
 
+function compileClib () {
+	echo "*************************************************************************"	
+	echo "Testing C library compilation " $1 "..."
+	cd $EIFFEL_LIBRARY/contrib/library/game/$2/Clib
+	finish_freezing -library
+	if (( $? )) 
+	then 
+		echo Error while compiling C code of $1.
+		exit 1
+	fi
+	echo "done."
+}
+
 function compileSubLib () {
 	echo "*************************************************************************"	
 	echo "Testing" $1 "..."
-	clibClear
 	cd $EIFFEL_LIBRARY/contrib/library/game/$2
 	ec -batch -config $3 -target $4
 	if (( $? )) 
@@ -68,7 +76,6 @@ function compileSubLib () {
 function compileEx () {
 	echo "*************************************************************************"	
 	echo "Testing" $1 "..."
-	clibClear
 	cd $EIFFEL_LIBRARY/contrib/library/game/exemples/$2
 	ec -batch -c_compile -config $3 -target $4
 	if (( $? )) 
@@ -91,13 +98,18 @@ eifgensLibClear
 if [[ "1$PARAM" != "1clean" ]]
 then
 
+	compileClib	"Audio Snd Files Lib" "audio_snd_files_lib"
+	compileClib	"Audio/Video AV Files Lib" "audio_video_lib"
+	compileClib	"Custom Package Files Lib" "cpf_lib"
+	compileClib	"Game Core Lib" "game_core_lib"
+
 	if [[ "1$PARAM" != "1exemples" ]]
 	then
 		compileSubLib "Custom Package Files Lib" "cpf_lib" "cpf_lib.ecf" "cpf_lib"
 		compileSubLib "Game Core Lib" "game_core_lib" "game_core_lib.ecf" "game_core_lib"
 		compileSubLib "Game Effects Lib" "game_effects_lib" "game_effects_lib.ecf" "game_effects_lib"
 		compileSubLib "Game Images Files Lib" "game_images_files_lib" "game_images_files_lib.ecf" "game_images_files_lib"
-		compileSubLib "Game Text Lib" "game_text_lib" "eiffel_text_lib.ecf" "game_text_lib"
+		compileSubLib "Game Text Lib" "game_text_lib" "game_text_lib.ecf" "game_text_lib"
 		compileSubLib "Audio Lib" "audio_lib" "audio_lib.ecf" "audio_lib"
 		compileSubLib "Audio AV Files Lib" "audio_video_lib" "audio_av_files_lib.ecf" "audio_av_files_lib"
 		compileSubLib "Video AV Files Lib" "audio_video_lib" "video_av_files_lib.ecf" "video_av_files_lib"

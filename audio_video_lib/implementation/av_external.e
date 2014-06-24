@@ -481,18 +481,18 @@ feature -- libavcodec Constants
 			"PIX_FMT_YUV420P"
 		end
 
-feature -- av_more.h
+feature -- av_additions.h
 
 	frozen av_more_read_packet :POINTER
 		external
-			"C inline use <av_more.h>"
+			"C inline use <av_additions.h>"
 		alias
 			"&av_more_read_packet"
 		end
 
 	frozen av_more_seek :POINTER
 		external
-			"C inline use <av_more.h>"
+			"C inline use <av_additions.h>"
 		alias
 			"&av_more_seek"
 		end
