@@ -110,6 +110,7 @@ feature {NONE} -- Initialization
 												-- AUDIO_SOUND_AV_CPF use the libav C library (libavcodec and libavformat)
 												-- AUDIO_SOUND_WAV_CPF don't use any third party library.
 												-- Other than the class name, all AUDIO_SOUND_*_FILE and AUDIO_SOUND_*_CPF are used identicaly.
+												-- Note that with msc compiler on Windows, you cannot use the AUDIO_SOUND_AV_CPF class.
 
 			sound_source,music_source:AUDIO_SOURCE
 		do
