@@ -70,7 +70,7 @@
 				<concurrency excluded_value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libsndfile\lib\libsndfile-1.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libsndfile\lib\$(ISE_PLATFORM)\libsndfile-1.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>

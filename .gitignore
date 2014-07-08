@@ -7,3 +7,4 @@ msc
 mingw
 *.rc
 linux-x86-64
+exception_trace.log

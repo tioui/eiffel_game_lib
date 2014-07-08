@@ -46,7 +46,7 @@
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\include\SDL">
+		<external_include location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\include">
 			<condition>
 				<platform value="windows"/>
 			</condition>
@@ -110,12 +110,12 @@
 				<concurrency excluded_value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\libSDL.dll.a">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\SDL.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\libSDLmain.a">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\SDLmain.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
