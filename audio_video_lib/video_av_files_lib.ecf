@@ -106,22 +106,22 @@
 				<concurrency excluded_value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\avcodec.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\$(ISE_PLATFORM)\avcodec.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\avformat.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\$(ISE_PLATFORM)\avformat.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\swscale.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\$(ISE_PLATFORM)\swscale.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\avutil.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\libav\lib\$(ISE_PLATFORM)\avutil.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>

@@ -5,7 +5,7 @@ INDIR= .
 CC = $cc
 OUTPUT_CMD = $output_cmd
 CFLAGS = -I"$rt_include" -I..$(DIR)spec$(DIR)include -I. \
-	-I..$(DIR)..$(DIR)C_lib_win$(DIR)SDL$(DIR)include$(DIR)SDL  -I..$(DIR)..$(DIR)cpf_lib$(DIR)spec$(DIR)include
+	-I..$(DIR)..$(DIR)C_lib_win$(DIR)SDL$(DIR)include  -I..$(DIR)..$(DIR)cpf_lib$(DIR)spec$(DIR)include
 JCFLAGS = $(CFLAGS) $ccflags $optimize
 JMTCFLAGS = $(CFLAGS) $mtccflags $optimize
 JILCFLAGS = $(CFLAGS) $mtccflags $optimize -DEIF_IL_DLL

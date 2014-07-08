@@ -38,6 +38,8 @@
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_cflag>
+		
+		
 		<external_object location="$(ISE_LIBRARY)\contrib\library\game\audio_snd_files_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\sndfile_additions.lib">
 			<condition>
 				<platform value="windows"/>
@@ -58,6 +60,30 @@
 				<dotnet value="true"/>
 			</condition>
 		</external_object>
+		
+		
+		<external_object location="$(ISE_LIBRARY)\contrib\library\game\cpf_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\cpf_additions.lib">
+			<condition>
+				<platform value="windows"/>
+				<concurrency value="none"/>
+				<dotnet value="false"/>
+			</condition>
+		</external_object>
+		<external_object location="$(ISE_LIBRARY)\contrib\library\game\cpf_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtcpf_additions.lib">
+			<condition>
+				<platform value="windows"/>
+				<concurrency excluded_value="none"/>
+				<dotnet value="false"/>
+			</condition>
+		</external_object>
+		<external_object location="$(ISE_LIBRARY)\contrib\library\game\cpf_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\ilcpf_additions.lib">
+			<condition>
+				<platform value="windows"/>
+				<dotnet value="true"/>
+			</condition>
+		</external_object>
+		
+		
 		<external_object location="$(EIFFEL_LIBRARY)/contrib/library/game/audio_snd_files_lib/spec/$(ISE_PLATFORM)/lib/sndfile_additions.o">
 			<condition>
 				<platform excluded_value="windows"/>

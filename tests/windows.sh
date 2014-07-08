@@ -1,20 +1,8 @@
 #!/bin/bash
 
-export ES_COMPILER="/c/Program Files/Eiffel Software/EiffelStudio 7.3 GPL/studio/spec/windows/bin/ec.exe"
+export ES_COMPILER="/c/Program Files/Eiffel Software/EiffelStudio 14.05 GPL/studio/spec/windows/bin/ec.exe"
 
 PARAM=$1
-
-
-function clibClear () {
-	cd "$EIFFEL_LIBRARY/contrib/library/game/audio_snd_files_lib/implementation/Clib"
-	make clean
-	cd "$EIFFEL_LIBRARY/contrib/library/game/audio_video_lib/implementation/Clib"
-	make clean
-	cd "$EIFFEL_LIBRARY/contrib/library/game/cpf_lib/implementation/Clib"
-	make clean
-	cd "$EIFFEL_LIBRARY/contrib/library/game/game_core_lib/implementation/Clib"
-	make clean
-}
 
 function eifgensLibClear () {
 	rm -rf "$EIFFEL_LIBRARY/contrib/library/game/audio_lib/EIFGENs"
@@ -52,7 +40,6 @@ function eifgensExClear () {
 function compileSubLib () {
 	echo "*************************************************************************"	
 	echo "Testing" $1 "..."
-	clibClear
 	cd "$EIFFEL_LIBRARY/contrib/library/game/$2"
 	"$ES_COMPILER" -batch -config $3 -target $4
 	if (( $? )) 
@@ -66,7 +53,6 @@ function compileSubLib () {
 function compileEx () {
 	echo "*************************************************************************"	
 	echo "Testing" $1 "..."
-	clibClear
 	cd "$EIFFEL_LIBRARY/contrib/library/game/exemples/$2"
 	"$ES_COMPILER" -batch -c_compile -config $3 -target $4
 	if (( $? )) 
@@ -82,8 +68,6 @@ function compileEx () {
 	echo "done."
 }
 
-
-clibClear
 eifgensExClear
 eifgensLibClear
 
@@ -122,7 +106,6 @@ then
 
 	if [[ "1$PARAM" != "1keep" ]]
 	then
-		clibClear
 		eifgensExClear
 		eifgensLibClear
 	fi
