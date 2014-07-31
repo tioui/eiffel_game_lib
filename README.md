@@ -30,10 +30,16 @@ Installation on Linux (Ubuntu)
 * Create a project and add the libraries you need (".ecf" file) in the project.(You can use the EIFFEL_LIBRARY environment variable to add those libraries. For example: $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/game_core_lib.ecf .
 
 
-Installation on Windows
+Installation on Windows (prebuild)
+----------------------------------
+
+See here: [https://github.com/tioui/eiffel_game_lib/tree/Windows_Build](https://github.com/tioui/eiffel_game_lib/tree/Windows_Build)
+
+
+Installation on Windows (manual build)
 -----------------------
 
-* You must use an EiffelStudio 32 bits. If you don't have it already, install it.
+* You must have EiffelStudio. If you don't have it already, install it.
 * Rename the "eiffel_game_lib" folder to "game".
 * You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "c:\Program Files\Eiffel Software\".
 * You need to install the C libraries dependencies. To get them, download the file [C_library_Windows.zip](https://github.com/tioui/eiffel_game_lib/raw/40abacf6d7321965fa0c934109957abf4228f117/C_library_Windows.zip) . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.
