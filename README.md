@@ -2,7 +2,7 @@ eiffel_game_lib
 ===============
 
 A Game library for ISE Eiffel.
-This is a library for game developing with the Eiffel Language. The library is compatible with the IDE EiffelStudio 7.3 from ISE.
+This is a library for game developing with the Eiffel Language. The library is compatible with the IDE EiffelStudio 14.05 from ISE.
 
 The library is compatible with Linux, MAC OS X, Windows, GP2X Wiz and Caanoo.
 
@@ -17,7 +17,7 @@ Installation on Linux (Ubuntu)
 
 * I assume that you already have a functional EiffelStudio on your system. If not, install it. Also be sure that the EiffelStudio binary (ec, finish_freezing, etc.) are in the PATH.
 * Rename the "eiffel_game_lib" folder to "game".
-* You need to add the game library in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/usr/lib/EiffelStudio73" or in "/usr/local/Eiffel73".
+* You need to add the game library in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/usr/lib/EiffelStudio_XX.XX" or in "/usr/local/Eiffel_XX.XX".
 * You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile and all their development tools kit and dependencies:  
 
 ***
@@ -36,13 +36,11 @@ Installation on Windows
 * You must use an EiffelStudio 32 bits. If you don't have it already, install it.
 * Rename the "eiffel_game_lib" folder to "game".
 * You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "c:\Program Files\Eiffel Software\".
-* You need to install the C libraries dependencies. To get them, download the file [https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip](https://github.com/downloads/tioui/eiffel_game_lib/C_lib_win.zip) . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.
+* You need to install the C libraries dependencies. To get them, download the file [https://github.com/tioui/eiffel_game_lib/blob/40abacf6d7321965fa0c934109957abf4228f117/C_library_Windows.zip](C_library_Windows.zip) . When you extract the file, you should have a C_lib_win directory. Put the C_lib_win directory in the root directory of the Eiffel Game Lib repository directory.
 * Using the "EiffelStudio command prompt" (look in the Windows "Start" menu), execute the "compile_c_library.bat" script.
 * Create a project and add the libraries you need (".ecf" file) in the project.(You can use the EIFFEL_LIBRARY environment variable to add those libraries. For example: $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/game_core_lib.ecf .
 * Put all ".dll" files of the C_lib_win\DLL32 directory in the new project directory or in the C:\Windows\System32\ (or in SysWOW64 if you use a 64bits Windows).
 * Please note that since the libav C library does not support the Visual C compiler, the audio video library (to play movie) will not compile with Visual C compiler.
-* Please note that the effect library does not work with the Visual C compiler.
-* Please note that the library does not work on an 64 bits compiler.
 
 Installation on Mac OS X
 ------------------------
