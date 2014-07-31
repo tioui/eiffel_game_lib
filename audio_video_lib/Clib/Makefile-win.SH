@@ -37,16 +37,28 @@ clean:
 
 av_additions.lib: $(OBJECTS)
 	$alib_line
+# Bugfix for MinGW concerning file order (msc won't find the command and with the "-" prefix, it is not fatal)
+	-"$compiler_path/bin/ar" x ..$(DIR)..$(DIR)cpf_lib$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)cpf_additions.lib
+	-"$compiler_path/bin/ar" rc $@ cpf_additions.o
+# End bugfix
 	$(MKDIR) ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib
 	$(MV) $@ ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)$@
 
 mtav_additions.lib: $(MT_OBJECTS)
 	$alib_line
+# Bugfix for MinGW concerning file order (msc won't find the command and with the "-" prefix, it is not fatal)
+	-"$compiler_path/bin/ar" x ..$(DIR)..$(DIR)cpf_lib$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)mtcpf_additions.lib
+	-"$compiler_path/bin/ar" rc $@ mtcpf_additions.o
+# End bugfix
 	$(MKDIR) ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib
 	$(MV) $@ ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)$@
 
 ilav_additions.lib: $(IL_OBJECTS)
 	$alib_line
+# Bugfix for MinGW concerning file order (msc won't find the command and with the "-" prefix, it is not fatal)
+	-"$compiler_path/bin/ar" x ..$(DIR)..$(DIR)cpf_lib$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)ilcpf_additions.lib
+	-"$compiler_path/bin/ar" rc $@ ilcpf_additions.o
+# End bugfix
 	$(MKDIR) ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib
 	$(MV) $@ ..$(DIR)spec$(DIR)$(ISE_C_COMPILER)$(DIR)$(ISE_PLATFORM)$(DIR)lib$(DIR)$@
 

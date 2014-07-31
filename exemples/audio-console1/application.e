@@ -54,7 +54,6 @@ feature {NONE} -- Initialization
 				audio_ctrl.update	-- This line is very important. If it is not execute reguraly,
 							-- the source will stop playing.
 			end
-							-- In some system, the absence of this method can lock the audio device until a reboot.
 		end
 
 end

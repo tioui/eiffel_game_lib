@@ -1,6 +1,16 @@
 #!/bin/bash
 
-export ES_COMPILER="/c/Program Files/Eiffel Software/EiffelStudio 14.05 GPL/studio/spec/windows/bin/ec.exe"
+if [ -z "$ISE_EIFFEL" ];
+then
+	export ISE_EIFFEL=/c/Program Files/Eiffel Software/EiffelStudio 14.05 GPL
+fi
+
+if [ -z "$EIFFEL_LIBRARY" ];
+then
+	export EIFFEL_LIBRARY=$ISE_EIFFEL
+fi
+
+export ES_COMPILER="$ISE_EIFFEL/studio/spec/windows/bin/ec.exe"
 
 PARAM=$1
 

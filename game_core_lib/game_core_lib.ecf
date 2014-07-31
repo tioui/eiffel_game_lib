@@ -110,12 +110,12 @@
 				<concurrency excluded_value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\SDL.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\SDLmain.lib">
+		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDLmain.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>

@@ -247,7 +247,7 @@ SDL_Surface* rotateSurface90Degrees_16(SDL_Surface* src, int numClockwiseTurns)
 
 SDL_Surface* rotateSurface90Degrees_8(SDL_Surface* src, int numClockwiseTurns) 
 {
-	int row, col, newWidth, newHeight,i;
+	int row, col, newWidth, newHeight;
 	SDL_Surface* dst;
 	Uint8* srcBuf;
 	Uint8* dstBuf;
@@ -385,7 +385,7 @@ SDL_Surface* rotateSurface90Degrees_all(SDL_Surface* src, int numClockwiseTurns)
 
 SDL_Surface* mirrorSurfaceX_8(SDL_Surface* src) 
 {
-	int row, col, newWidth, newHeight,i;
+	int row, col;
 	SDL_Surface* dst;
 	Uint8* srcBuf;
 	Uint8* dstBuf;
@@ -434,7 +434,7 @@ SDL_Surface* mirrorSurfaceX_8(SDL_Surface* src)
 
 SDL_Surface* mirrorSurfaceX_16(SDL_Surface* src) 
 {
-	int src_ipr,dst_ipr,row, col, newWidth, newHeight,i;
+	int src_ipr,dst_ipr,row, col;
 	SDL_Surface* dst;
 	Uint16* srcBuf;
 	Uint16* dstBuf;
@@ -482,7 +482,7 @@ SDL_Surface* mirrorSurfaceX_16(SDL_Surface* src)
 
 SDL_Surface* mirrorSurfaceX_32(SDL_Surface* src) 
 {
-	int src_ipr,dst_ipr,row, col, newWidth, newHeight,i;
+	int src_ipr,dst_ipr,row, col;
 	SDL_Surface* dst;
 	Uint32* srcBuf;
 	Uint32* dstBuf;
@@ -551,7 +551,7 @@ SDL_Surface* MirrorSurfaceX( SDL_Surface *src )
 
 SDL_Surface* mirrorSurfaceY_8(SDL_Surface* src) 
 {
-	int row, col, newWidth, newHeight;
+	int row, col;
 	SDL_Surface* dst;
 	Uint8* srcBuf;
 	Uint8* dstBuf;
@@ -599,7 +599,7 @@ SDL_Surface* mirrorSurfaceY_8(SDL_Surface* src)
 
 SDL_Surface* mirrorSurfaceY_16(SDL_Surface* src) 
 {
-	int src_ipr,dst_ipr,row, col, newWidth, newHeight,i;
+	int src_ipr,dst_ipr,row, col;
 	SDL_Surface* dst;
 	Uint16* srcBuf;
 	Uint16* dstBuf;
@@ -640,7 +640,7 @@ SDL_Surface* mirrorSurfaceY_16(SDL_Surface* src)
 
 SDL_Surface* mirrorSurfaceY_32(SDL_Surface* src) 
 {
-	int src_ipr,dst_ipr,row, col, newWidth, newHeight,i;
+	int src_ipr,dst_ipr,row, col;
 	SDL_Surface* dst;
 	Uint32* srcBuf;
 	Uint32* dstBuf;
