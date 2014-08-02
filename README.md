@@ -10,7 +10,7 @@ The library is under Eiffel Forum License v2.
 
 The project use those libraries: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, Libsndfile and FFMPEG LibAV.
 
-Please note that the library do not work very well with the new versions of FFMPEG LibAV. Sorry about that, this will not be correct. In the version 2, th library will use another external library for video procesing.
+Please note that the library do not work very well with the new versions of FFMPEG LibAV. Sorry about that, this will not be corrected. In the version 2, th library will use another external library for video procesing.
 
 [<img src="http://api.flattr.com/button/flattr-badge-large.png">](http://flattr.com/thing/971297/Eiffel-Game-Library)
 
