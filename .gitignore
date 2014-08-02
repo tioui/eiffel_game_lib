@@ -2,9 +2,13 @@
 EIFGENs
 objet-*
 C_lib_win
+C_lib_mac
 *.dll
 msc
 mingw
 *.rc
 linux-x86-64
+linux-x86
+macosx-x86-64-SDL
+macosx-x86-64
 exception_trace.log

@@ -51,8 +51,8 @@ Installation on Windows (manual build)
 Installation on Mac OS X
 ------------------------
 
-* Install EiffelStudio 7.3.
-* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/Applications/MacPorts/Eiffel73/".
+* Install EiffelStudio (I am using the 13.11 version).
+* You need to add the "game" library folder in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "/Applications/MacPorts/Eiffel_XX.XX/".
 * You need to get some files to adjust SDL on Mac OS X. To get them, download the file [https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz](https://github.com/downloads/tioui/eiffel_game_lib/C_lib_mac.tar.gz) . When you extract the file, you should have a C_lib_mac directory. Put the C_lib_mac directory in the root directory of the Eiffel Game Lib repository directory.
 * You need to install the C libraries SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, libsndfile, ffmpeg library and all their development tools kit and dependencies. You can install them with MacPort by installing the port libsdl-framework, libsdl_gfx-framework, libsdl_image-framework, libsdl_ttf-framework, libsndfile and ffmpeg-devel.
 * OpenAL must be install another way. For that, install cmake using MacPort. Extract the file "openal-soft-1.14.tar.bz2" found in the C_lib_mac.tar.gz archive downloaded in before. Once extract, open a terminal a go into the directory build of the created directory of the archive extraction. Compile the library and install it
@@ -61,7 +61,7 @@ Installation on Mac OS X
 ***
 
     cd /path/to/openal-soft-1.14/build
-    cmake ..
+    cmake -DEXAMPLES=OFF ..
     make
     sudo make install
 
@@ -76,7 +76,14 @@ Installation on Mac OS X
 ***
 
 * Now, ready for the hard part? The SDL library need a specific Main in the C program and also need to have an "#include <SDL.h>" in the same C file that the on that contain the main. It is evident that EiffelStudio don't respect these necessities from SDL. We will have to do a little hack to allow EiffelStudio to use SDL. We will make the hack in a new EiffelStudio application (a copy), so don't worry, your EiffelStudio should not be harm by this hack.
-* Open a terminal a go to the directory Eiffel?? (most likely Eiffel73).
+* Open a terminal a go to the directory Eiffel_XX.XX (most likely Eiffel_13.11).
+
+***
+
+    cd $ISE_EIFFEL
+
+***
+
 * Copy the macosx-x86-64 specs to macosx-x86-64-SDL:
 
 ***
@@ -108,21 +115,7 @@ Installation on Mac OS X
 
 ***
 
-* Change the line 13:
-
-***
-
-    Before: extern int main(int, char **, char **);
-
-***
-
-***
-
-    After: extern int main(int, char **);
-
-***
-
-* Change the line 18:
+* Change the line 15:
 
 ***
 
@@ -136,7 +129,7 @@ Installation on Mac OS X
 
 ***
 
-* Change the line 19:
+* Change the line 16:
 
 ***
 
@@ -150,7 +143,7 @@ Installation on Mac OS X
 
 ***
 
-* Change the line 21:
+* Change the line 26:
 
 ***
 
@@ -166,6 +159,26 @@ Installation on Mac OS X
 
 * Save and quit the text editor.
 * Now, when you launch estudio, change the ISE_PLATFORM environment variable from macosx-x86-64 to macosx-x86-64-SDL.
+* Now, you have to compile the C files used by the Eiffel Game Library. To do this, go to the "game" library, set the correct C flags and execute compile_c_library.sh script.
+
+***
+    export ISE_PLATFORM=macosx-x86-64-SDL # Just to be sure
+    cd $ISE_EIFFEL/contrib/library/game
+    export CFLAGS="$CFLAGS -I/opt/local/include"
+    ./compile_c_library.sh
+
+***
+
+* You can also compile the C files for the macosx-x86-64 target if you don't use the "game_core_lib" (for example if you create a console audio player).
+
+***
+    export ISE_PLATFORM=macosx-x86-64 # Just to be sure
+    cd $ISE_EIFFEL/contrib/library/game
+    export CFLAGS="$CFLAGS -I/opt/local/include"
+    ./compile_c_library.sh
+
+***
+
 * Create a project and add the libraries you need (".ecf" file) in the project.(You can use the EIFFEL_LIBRARY environment variable to add those libraries. For example: $EIFFEL_LIBRARY/contrib/library/game/game_core_lib/game_core_lib.ecf .
 * Note that the spec that we create has no precompile library. It will be necessary to remove the default Precompile library in the project.
 
