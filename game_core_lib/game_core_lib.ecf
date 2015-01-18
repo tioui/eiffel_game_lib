@@ -8,7 +8,7 @@
 		<option full_class_checking="false" is_attached_by_default="false" void_safety="none" syntax="transitional" namespace="Lambda.Library.eiffel_game_lib">
 			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
 		</option>
-		<external_include location="$(EIFFEL_LIBRARY)/contrib/library/game/game_core_lib/spec/include"/>
+		<external_include location="$(IRON_PATH)/packages/game/game_core_lib/spec/include"/>
 		<external_include location="/usr/include/SDL">
 			<condition>
 				<platform value="unix"/>
@@ -26,7 +26,7 @@
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_caanoo/include">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_caanoo/include">
 			<condition>
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
@@ -36,17 +36,17 @@
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_wiz/include/SDL">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_wiz/include/SDL">
 			<condition>
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_wiz/include">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_wiz/include">
 			<condition>
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\include">
+		<external_include location="$(IRON_PATH)\packages\game\C_lib_win\SDL\include">
 			<condition>
 				<platform value="windows"/>
 			</condition>
@@ -56,7 +56,7 @@
 				<platform value="macintosh"/>
 			</condition>
 		</external_include>
-		<external_include location="$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_mac/SDL">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_mac/SDL">
 			<condition>
 				<platform value="macintosh"/>
 			</condition>
@@ -68,12 +68,12 @@
 				<custom name="toolchain" excluded_value="caanoo"/>
 			</condition>
 		</external_cflag>
-		<external_cflag value="-L/opt/gcc-4.2.4-glibc-2.7-eabi/lib -L/opt/gcc-4.2.4-glibc-2.7-eabi/arm-gph-linux-gnueabi/sys-root/usr/lib -L\$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_caanoo/lib -D_FILE_OFFSET_BITS=64">
+		<external_cflag value="-L/opt/gcc-4.2.4-glibc-2.7-eabi/lib -L/opt/gcc-4.2.4-glibc-2.7-eabi/arm-gph-linux-gnueabi/sys-root/usr/lib -L\$(IRON_PATH)/packages/game/C_lib_caanoo/lib -D_FILE_OFFSET_BITS=64">
 			<condition>
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
 		</external_cflag>
-		<external_cflag value="-L/opt/arm-openwiz-linux-gnu/lib -L/opt/arm-openwiz-linux-gnu/arm-openwiz-linux-gnu/sys-root/lib -L\$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_wiz/lib -D_FILE_OFFSET_BITS=64">
+		<external_cflag value="-L/opt/arm-openwiz-linux-gnu/lib -L/opt/arm-openwiz-linux-gnu/arm-openwiz-linux-gnu/sys-root/lib -L\$(IRON_PATH)/packages/game/C_lib_wiz/lib -D_FILE_OFFSET_BITS=64">
 			<condition>
 				<custom name="toolchain" value="wiz"/>
 			</condition>
@@ -98,29 +98,29 @@
 				<dotnet value="true"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)/contrib/library/game/game_core_lib/spec/$(ISE_PLATFORM)/lib/sdl_additions.o">
+		<external_object location="$(IRON_PATH)/packages/game/game_core_lib/spec/$(ISE_PLATFORM)/lib/sdl_additions.o">
 			<condition>
 				<platform excluded_value="windows"/>
 				<concurrency value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)/contrib/library/game/game_core_lib/spec/$(ISE_PLATFORM)/lib/MTsdl_additions.o">
+		<external_object location="$(IRON_PATH)/packages/game/game_core_lib/spec/$(ISE_PLATFORM)/lib/MTsdl_additions.o">
 			<condition>
 				<platform excluded_value="windows"/>
 				<concurrency excluded_value="none"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL.lib">
+		<external_object location="$(IRON_PATH)\packages\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)\contrib\library\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDLmain.lib">
+		<external_object location="$(IRON_PATH)\packages\game\C_lib_win\SDL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDLmain.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="$(EIFFEL_LIBRARY)/contrib/library/game/C_lib_mac/SDL/SDLmain.m">
+		<external_object location="$(IRON_PATH)/packages/game/C_lib_mac/SDL/SDLmain.m">
 			<condition>
 				<platform value="macintosh"/>
 			</condition>
@@ -142,9 +142,9 @@
 			</condition>
 		</external_linker_flag>
 		<variable name="malloc_check_" value="0"/>
-		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
-		<library name="cpf_lib" location="$EIFFEL_LIBRARY\contrib\library\game\cpf_lib\cpf_lib.ecf"/>
-		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+		<library name="base" location="iron:base:base.ecf"/>
+		<library name="cpf_lib" location="iron:game:cpf_lib\cpf_lib.ecf"/>
+		<library name="time" location="iron:time:time.ecf"/>
 		<cluster name="game_core_lib" location=".\" recursive="true">
 			<description>A Game Library for EiffelStudio</description>
 			<file_rule>
