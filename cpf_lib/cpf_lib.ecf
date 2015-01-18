@@ -72,7 +72,7 @@
 			</condition>
 		</external_library>
 		<library name="base" location="iron:base:base.ecf"/>
-		<library name="thread" location="iron:base:thread.ecf"/>
+		<library name="thread" location="iron:thread:thread.ecf"/>
 		<cluster name="cpf_lib" location=".\" recursive="true">
 			<description>An add-on for the Eiffel Game Lib to use customs packages files.</description>
 			<file_rule>
