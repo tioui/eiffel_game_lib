@@ -1,0 +1,33 @@
+package game
+
+project
+	audio = "audio_lib/audio_lib.ecf"
+	audio_snd_files = "audio_snd_files_lib/audio_snd_files_lib.ecf"
+	av_files_audio = "audio_video_lib/audio_av_files_lib.ecf"
+	av_files_video = "audio_video_lib/video_av_files_lib.ecf"
+	av_files_audio_video = "audio_video_lib/audio_video_av_files_lib.ecf"
+	custom_package_file = "cpf_lib/cpf_lib.ecf"
+	custom_package_file_application = "custom_package_file_app/custom_package_file_app.ecf"
+	game_core = "game_core_lib/game_core_lib.ecf"
+	game_effects = "game_effects_lib/game_effects_lib.ecf"
+	game_images_files = "game_images_files_lib/game_images_files_lib.ecf"
+	game_text = "game_text_lib/game_text_lib.ecf"
+
+note
+	title: Eiffel Game
+	description: "Eiffel libraries to used in game developpment."
+
+	tags: game
+	license: Eiffel Forum License v2 
+	copyright: 2012-2015 Louis Marchand
+	link[doc]: "Documentation" http://tioui.github.io/eiffel_game_lib/
+	link[source]: "Git" https://github.com/tioui/eiffel_game_lib
+	link[license]: http://www.eiffel.com/licensing/forum.txt
+
+setup
+	compile_library = cpf_lib/Clib
+	compile_library = audio_snd_files_lib/Clib
+	compile_library = audio_video_lib/Clib
+	compile_library = game_core_lib/Clib
+
+end
