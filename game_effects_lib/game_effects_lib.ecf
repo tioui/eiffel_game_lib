@@ -28,7 +28,7 @@
 			</condition>
 		</external_linker_flag>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
-		<library name="game_core_lib" location="$EIFFEL_LIBRARY\contrib\library\game\game_core_lib\game_core_lib.ecf" readonly="true"/>
+		<library name="game_core_lib" location="$EIFFEL_LIBRARY\contrib\library\game\game_core_lib\game_core_lib.ecf"/>
 		<cluster name="game_effects_lib" location=".\" recursive="true">
 			<description>An addon for the Eiffel Game Library for doing graphical effectas of a surface</description>
 			<file_rule>
