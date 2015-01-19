@@ -12,7 +12,10 @@ The project use those libraries: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, Libsn
 
 Please note that the library do not work very well with the new versions of FFMPEG LibAV. Sorry about that, this will not be corrected. In the version 2, th library will use another external library for video procesing.
 
+
 [<img src="http://api.flattr.com/button/flattr-badge-large.png">](http://flattr.com/thing/971297/Eiffel-Game-Library)
+[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=louis%40tioui%2ecom&lc=CA&item_name=Louis%20Marchand&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
+
 
 Installation on Linux (Ubuntu)
 ------------------------------
