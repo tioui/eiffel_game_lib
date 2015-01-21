@@ -25,9 +25,6 @@ note
 	link[license]: http://www.eiffel.com/licensing/forum.txt
 
 setup
-	compile_library = cpf_lib/Clib
-	compile_library = audio_snd_files_lib/Clib
-	compile_library = audio_video_lib/Clib
-	compile_library = game_core_lib/Clib
+	compile_library = Clib
 
 end

@@ -74,21 +74,21 @@
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_cflag>
-		<external_object location="$(ISE_LIBRARY)\contrib\library\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\av_additions.lib">
+		<external_object location="$(IRON_PATH)\packages\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\av_additions.lib">
 			<condition>
 				<platform value="windows"/>
 				<concurrency value="none"/>
 				<dotnet value="false"/>
 			</condition>
 		</external_object>
-		<external_object location="$(ISE_LIBRARY)\contrib\library\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtav_additions.lib">
+		<external_object location="$(IRON_PATH)\packages\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtav_additions.lib">
 			<condition>
 				<platform value="windows"/>
 				<concurrency excluded_value="none"/>
 				<dotnet value="false"/>
 			</condition>
 		</external_object>
-		<external_object location="$(ISE_LIBRARY)\contrib\library\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\ilav_additions.lib">
+		<external_object location="$(IRON_PATH)\packages\game\audio_video_lib\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\ilav_additions.lib">
 			<condition>
 				<platform value="windows"/>
 				<dotnet value="true"/>
