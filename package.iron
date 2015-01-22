@@ -18,7 +18,7 @@ project
 
 note
 	title: Eiffel Game
-	description: "Eiffel libraries to used in game developpment.On Windows, you must copy the correct DLL in the project folder or in the Windows system folder. See: https://github.com/tioui/eiffel_game_lib/raw/40abacf6d7321965fa0c934109957abf4228f117/C_library_Windows.zip . On linux, you need those development libraries installed: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, Libsndfile and FFMPEG LibAV. On ubuntu, use: sudo apt-get install libsdl-dev libsdl-image1.2-dev libsdl-gfx1.2-dev libsdl-ttf2.0-dev libopenal-dev libsndfile1-dev libavcodec-dev libavformat-dev libswscale-dev libavresample-dev ."
+	description: "Eiffel libraries to used in game development. On Windows, you must copy the correct DLL in the project folder or in the Windows system folder. See: https://github.com/tioui/eiffel_game_lib/tree/Windows_Build to get the DLL. On Linux, you need those development libraries installed: SDL, SDL_image, SDL_gfx, SDL_ttf, OpenAL, Libsndfile and FFMPEG LibAV. On ubuntu, use: sudo apt-get install libsdl-dev libsdl-image1.2-dev libsdl-gfx1.2-dev libsdl-ttf2.0-dev libopenal-dev libsndfile1-dev libavcodec-dev libavformat-dev libswscale-dev libavresample-dev . Mac is currently not supported."
 
 	tags: game
 	license: Eiffel Forum License v2 
