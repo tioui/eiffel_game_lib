@@ -19,17 +19,17 @@
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
 		</external_include>
-		<external_include location="`iron path game`/C_lib_caanoo/include/AL">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_caanoo/include/AL">
 			<condition>
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
 		</external_include>
-		<external_include location="`iron path game`/C_lib_wiz/include/AL">
+		<external_include location="$(IRON_PATH)/packages/game/C_lib_wiz/include/AL">
 			<condition>
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_include>
-		<external_include location="`iron path game`\C_lib_win\OpenAL\include">
+		<external_include location="$(IRON_PATH)\packages\game\C_lib_win\OpenAL\include">
 			<condition>
 				<platform value="windows"/>
 			</condition>
@@ -44,17 +44,17 @@
 				<platform value="macintosh"/>
 			</condition>
 		</external_include>
-		<external_cflag value="-L/opt/gcc-4.2.4-glibc-2.7-eabi/lib -L/opt/gcc-4.2.4-glibc-2.7-eabi/arm-gph-linux-gnueabi/sys-root/usr/lib -L\`iron path game`/C_lib_caanoo/lib">
+		<external_cflag value="-L/opt/gcc-4.2.4-glibc-2.7-eabi/lib -L/opt/gcc-4.2.4-glibc-2.7-eabi/arm-gph-linux-gnueabi/sys-root/usr/lib -L\$(IRON_PATH)/packages/game/C_lib_caanoo/lib">
 			<condition>
 				<custom name="toolchain" value="caanoo"/>
 			</condition>
 		</external_cflag>
-		<external_cflag value="-L/opt/arm-openwiz-linux-gnu/lib -L/opt/arm-openwiz-linux-gnu/arm-openwiz-linux-gnu/sys-root/lib -L\`iron path game`/C_lib_wiz/lib">
+		<external_cflag value="-L/opt/arm-openwiz-linux-gnu/lib -L/opt/arm-openwiz-linux-gnu/arm-openwiz-linux-gnu/sys-root/lib -L\$(IRON_PATH)/packages/game/C_lib_wiz/lib">
 			<condition>
 				<custom name="toolchain" value="wiz"/>
 			</condition>
 		</external_cflag>
-		<external_object location="`iron path game`\C_lib_win\OpenAL\libs\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\OpenAL32.lib">
+		<external_object location="$(IRON_PATH)\packages\game\C_lib_win\OpenAL\libs\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\OpenAL32.lib">
 			<condition>
 				<platform value="windows"/>
 			</condition>
