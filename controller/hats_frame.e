@@ -1,8 +1,9 @@
 note
-	description: "Summary description for {HATS_FRAME}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "{EV_FRAME} that is going to contain every {HAT_WIDGET} for every hat on a joystick"
+	generator: "EiffelBuild"
+	author: "Louis Marchand"
+	date: "2015-02-05"
+	revision: "1.0"
 
 class
 	HATS_FRAME
