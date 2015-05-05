@@ -18,7 +18,7 @@ Installation on Windows (prebuild)
 ----------------------------------
 
 * You must have EiffelStudio. If you don't have it already, install it.
-* Download the file [Eiffel_Game2.zip](https://github.com/tioui/eiffel_game_lib/raw/40abacf6d7321965fa0c934109957abf4228f117/Eiffel_Game_Library_Windows.zip)
+* Download the file [Eiffel_Game2.zip](https://github.com/tioui/eiffel_game_lib/raw/Windows_Build/Eiffel_Game2/Eiffel_Game2.zip)
 * Unzip the file Eiffel_Game2.zip
 * Move the directory "game" in the "contrib/library" folder of EiffelStudio. Normally, this folder is in "c:\Program Files\Eiffel Software\EiffelStudio 15.01 GPL\".
 * Create a project and add the libraries you need (".ecf" file) in the project.(You can use the EIFFEL_LIBRARY environment variable to add those libraries. For example: $EIFFEL_LIBRARY/contrib/library/game/game_core/game_core-safe.ecf .
