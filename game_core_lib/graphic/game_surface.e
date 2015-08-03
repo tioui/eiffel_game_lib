@@ -324,7 +324,7 @@ feature -- Access
 		-- Get the color of the pixel at `x', `y'.
 	require
 		Get_Pixel_X_Valid: a_x>=0 and a_x<width
-		Get_Pixel_Y_Valid: a_y>=0 and a_y<width
+		Get_Pixel_Y_Valid: a_y>=0 and a_y<height
 	local
 		l_color_index:NATURAL_32
 		l_red,l_green,l_blue,l_alpha:NATURAL_8
